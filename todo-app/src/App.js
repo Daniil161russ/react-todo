@@ -1,5 +1,8 @@
 import React from 'react'
 import List from './components/List'
+import AddButtonList from './components/AddListButton';
+
+import db from './assets/db.json'
 
 function App() {
   return (
@@ -28,17 +31,18 @@ function App() {
             name: 'Фильмы и сериалы'
           },
           {
-            color: 'lightgreen',
+            color: 'lime',
             name: 'Книги'
           },
           {
-            color: 'gray',
+            color: 'grey',
             name: 'Личное'
           }
-        ]}/>
+        ]} isRemovable />
+        <AddButtonList colors={db.colors}/>
       </div>
       <div className="todo__tasks">
-        1:07:00 время 
+        
       </div>
     </div>
   );

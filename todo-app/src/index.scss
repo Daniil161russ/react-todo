@@ -22,8 +22,37 @@
   &__sidebar {
     background-color: #F4F6F8;
     width: 200px;
-    height: 100%;
+    border-radius: 10px;
+    height: calc(100% - 120px);
     border-right: 1px solid #f1f1f1;
     padding: 60px 20px;
+  }
+}
+
+.button {
+  background: #4DD599;
+  border-radius: 4px;
+  color: #FFFFFF;
+  border: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  &:hover {
+    background: darken(#4DD599, 5%);
+  }
+  &:active {
+    background: darken(#4DD599, 10%);
+  }
+}
+
+.field {
+  width: 100%;
+  padding: 8px 12px;
+  background: #FFFFFF;
+  border: 1px solid #EFEFEF;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  &:focus {
+    border-color: #dbdbdb;
   }
 }
