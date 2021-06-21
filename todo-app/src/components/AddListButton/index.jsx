@@ -17,6 +17,9 @@ const AddButtonList = ({ colors, onAdd }) => {
 			return;
 		}
 		onAdd({ id: Math.random(), name: inputValue, color: colors.filter(c => c.id === selectedColor)[0].name });
+		setVisible(false)
+		setInputValue('')
+		setSelectColor(colors[0].id)
 	}
 
 	return (
