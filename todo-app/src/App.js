@@ -5,6 +5,7 @@ import { Tasks, List, AddButtonList} from './components';
 function App() {
   const [lists, setLists] = useState(null)
   const [colors, setColors] = useState(null)
+  const [activeItem, setActiveItem] = useState(null)
 
   useEffect(() => {
     axios
@@ -42,13 +43,17 @@ function App() {
               const newList = lists.filter(item => item.id !== id)
               setLists(newList)
             }} 
+            onClickItem={ item => {
+              setActiveItem(item);
+            }}
+            activeItem={activeItem}
             isRemovable 
           />
         ) : ( ' Загрузка... ')}
         <AddButtonList colors={colors} onAdd={onAddList}/>
       </div>
       <div className="todo__tasks">
-        {lists && <Tasks list={lists[1]}/>}
+        {lists && activeItem && <Tasks list={activeItem}/>}
       </div>
     </div>
   );
