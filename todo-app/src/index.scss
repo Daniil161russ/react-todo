@@ -37,6 +37,7 @@
 .button {
   background: #4DD599;
   border-radius: 4px;
+  font-size: 14px;
   color: #FFFFFF;
   border: 0;
   padding: 10px 20px;
@@ -47,11 +48,25 @@
   &:active {
     background: darken(#4DD599, 10%);
   }
+  &--grey {
+    background: #F4F6F8;
+    color: #9C9C9C;
+    &:hover {
+      background: darken(#F4F6F8, 5%);
+    }
+    &:active {
+      background: darken(#F4F6F8, 10%);
+    }
+  }
+  &:disabled {
+    background: #d8d8d8;
+  }
 }
 
 .field {
   width: 100%;
   padding: 8px 12px;
+  font-size: 14px;
   background: #FFFFFF;
   border: 1px solid #EFEFEF;
   box-sizing: border-box;

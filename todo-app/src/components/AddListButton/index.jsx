@@ -39,6 +39,8 @@ const AddButtonList = ({ colors, onAdd }) => {
 			const listObj = {...data, color: { name: color}}
 			onAdd(listObj)
 			onClose()
+		}).catch(() => {
+			alert("Ошибка при добавлении списка!")
 		}).finally(() => {
 			setIsLoading(false)
 		})

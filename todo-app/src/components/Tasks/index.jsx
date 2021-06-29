@@ -1,14 +1,30 @@
 import React from 'react'
+import axios from 'axios'
+
 import editSvg from '../../assets/img/edit.svg'
+import AddTaskForm from './AddTaskForm'
 
 import './Tasks.scss'
 
-const Tasks = ({list}) => {
+const Tasks = ({list, onAddTask, onEditTitle}) => {
+
+	const editTitle = () => {
+		const newTitle = window.prompt('Название списка', list.name)
+		if (newTitle) {
+			onEditTitle(list.id, newTitle)
+			axios.patch('http://localhost:3001/lists/' + list.id, {
+				name: newTitle
+			}).catch(() => {
+				alert('Произошла ошибка!')
+			})
+		}
+	}
+
 	return (
 		<div className="tasks">
 			<h2 className="tasks__title">
 				{list.name}
-				<img src={editSvg} alt="icon: edit" />
+				<img onClick={editTitle} src={editSvg} alt="icon: edit" />
 			</h2>
 			<div className="tasks__items">
 				{!list.tasks.length && <h2>Задачи отсутствуют</h2>}
@@ -25,6 +41,7 @@ const Tasks = ({list}) => {
 						<input readOnly value={task.text} />
 					</div>
 				))}
+				<AddTaskForm list={list} onAddTask={onAddTask}/>
 			</div>
 		</div>
 	)
