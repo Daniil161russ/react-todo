@@ -8,3 +8,4 @@ The project uses:
 - React Router
 - Axios
 - Json-Server
+- Classnames
