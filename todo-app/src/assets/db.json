@@ -6,11 +6,6 @@
       "colorId": 5
     },
     {
-      "id": 2,
-      "name": "Фронтенд",
-      "colorId": 4
-    },
-    {
       "id": 3,
       "name": "Фильмы и сериалы",
       "colorId": 3
@@ -26,46 +21,21 @@
       "colorId": 1
     },
     {
-      "name": "Спорт",
-      "colorId": 3,
+      "name": "Курс",
+      "colorId": 2,
       "id": 6
+    },
+    {
+      "name": "New",
+      "colorId": 6,
+      "id": 7
     }
   ],
   "tasks": [
     {
-      "id": 1,
-      "listId": 2,
-      "text": "Изучить JavaScript",
-      "completed": true
-    },
-    {
-      "id": 2,
-      "listId": 2,
-      "text": "Изучить паттерны проектирования",
-      "completed": false
-    },
-    {
-      "id": 3,
-      "listId": 2,
-      "text": "ReactJS Hooks (useState, useReducer, useEffect и т.д.)",
-      "completed": true
-    },
-    {
-      "id": 4,
-      "listId": 2,
-      "text": "Redux (redux-observable, redux-saga)",
-      "completed": false
-    },
-    {
-      "listId": 2,
-      "text": "123",
-      "completed": true,
-      "id": 5
-    },
-    {
       "listId": 1,
       "text": "test",
-      "completed": false,
+      "completed": true,
       "id": 6
     },
     {
@@ -93,22 +63,34 @@
       "id": 10
     },
     {
-      "listId": 2,
-      "text": "222",
+      "listId": 6,
+      "text": "Посмотреть 6 чать",
+      "completed": false,
+      "id": 15
+    },
+    {
+      "listId": 4,
+      "text": "Война и мир 2",
+      "completed": false,
+      "id": 16
+    },
+    {
+      "listId": 7,
+      "text": "1",
       "completed": true,
-      "id": 12
+      "id": 18
     },
     {
-      "listId": 5,
-      "text": "123",
+      "listId": 7,
+      "text": "2",
       "completed": false,
-      "id": 13
+      "id": 19
     },
     {
-      "listId": 1,
-      "text": "123",
+      "listId": 7,
+      "text": "3",
       "completed": false,
-      "id": 14
+      "id": 20
     }
   ],
   "colors": [
