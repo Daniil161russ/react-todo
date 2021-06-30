@@ -3,8 +3,8 @@
 
 The project uses:
 
-React Js
-Scss
-React Router
-Axios
-Json-Server
+- React Js
+- Scss
+- React Router
+- Axios
+- Json-Server
